@@ -12,7 +12,7 @@
 // @updateURL   https://github.com/mawekuwe/UserScripts/raw/master/Lichess_Chat_Enhancer/Lichess_Chat_Enhancer.user.js
 // @supportURL  https://github.com/mawekuwe/UserScripts/issues
 // @contributionURL 
-// @version     1.3
+// @version     1.5
 // @grant       none
 // @run-at      document-end
 // @include     http://*.lichess.org/*
@@ -20,7 +20,8 @@
 // ==/UserScript==
 
 
-if ($("body.dark").length) {
+var $dark = $("body.dark");
+if ($dark.length) {
     var colors = [
         "#2F5E8C", "#EF2F41", "#FFC700", "#61BDF2", "#5179D6", "#66CC66", "aqua", "lime", "silver", "teal", "navy", "white",
         "fuchsia", "olive", "yellow", "gray", "purple", "green", "red"];
