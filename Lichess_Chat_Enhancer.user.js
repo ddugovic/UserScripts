@@ -22,12 +22,12 @@
 
 if ($("body.dark").length) {
     var colors = [
-        "#2F5E8C", "#EF2F41", "#FFC700", "#61BDF2", "#5179D6", "#66CC66", "aqua", "lime", "silver", "maroon", "teal", "blue", "navy", "white",
+        "#2F5E8C", "#EF2F41", "#FFC700", "#61BDF2", "#5179D6", "#66CC66", "aqua", "lime", "silver", "teal", "navy", "white",
         "fuchsia", "olive", "yellow", "gray", "purple", "green", "red"];
 } else {
     var colors = [
-        "#EF2F41", "#FFC700", "#61BDF2", "#5179D6", "#66CC66", "aqua", "lime", "black", "maroon", "teal", "blue", "navy",
-        "fuchsia", "olive", "gray", "purple", "green", "red"];
+        "#EF2F41", "#61BDF2", "#5179D6", "#66CC66", "black", "maroon", "teal", "blue", "navy","fuchsia", "olive", "gray",
+        "purple", "green", "red"];
 }
 
 var colorContents = {};
