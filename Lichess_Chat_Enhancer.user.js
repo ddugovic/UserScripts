@@ -20,7 +20,7 @@
 // ==/UserScript==
 
 
-if ($("body.dark").lenght) {
+if ($("body.dark").length) {
     var colors = [
         "#2F5E8C", "#EF2F41", "#FFC700", "#61BDF2", "#5179D6", "#66CC66", "aqua", "lime", "silver", "maroon", "teal", "blue", "navy", "white",
         "fuchsia", "olive", "yellow", "gray", "purple", "green", "red"];
