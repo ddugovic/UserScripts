@@ -12,7 +12,7 @@
 // @updateURL   https://github.com/mawekuwe/UserScripts/raw/master/Lichess_Chat_Enhancer/Lichess_Chat_Enhancer.user.js
 // @supportURL  https://github.com/mawekuwe/UserScripts/issues
 // @contributionURL 
-// @version     1.2
+// @version     1.3
 // @grant       none
 // @run-at      document-end
 // @include     http://*.lichess.org/*
@@ -51,8 +51,11 @@ var observer = new MutationObserver(function (mutations) {
     });
 });
 
-observer.observe(list, {
-    attributes: true,
-    childList: true,
-    characterData: true
-});
+var chat = $('#chat');
+if (chat.length) {
+    observer.observe(list, {
+        attributes: true,
+        childList: true,
+        characterData: true
+    });
+}
