@@ -12,7 +12,7 @@
 // @updateURL   https://github.com/mawekuwe/UserScripts/raw/master/Lichess_Chat_Enhancer/Lichess_Chat_Enhancer.user.js
 // @supportURL  https://github.com/mawekuwe/UserScripts/issues
 // @contributionURL 
-// @version     1.0
+// @version     1.1
 // @grant       none
 // @run-at      document-end
 // @include     http://*.lichess.org/*
