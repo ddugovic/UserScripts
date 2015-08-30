@@ -6,8 +6,8 @@
 // @author      ddugovic
 // @copyright   2015+, ddugovic
 // @license     CC0 1.0 Universal
-// @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Compact_Lobby.js
-// @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Compact_Lobby.js
+// @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Compact_Lobby.user.js
+// @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Compact_Lobby.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
 // @version     0.1
 // @match       http://*.lichess.org/
