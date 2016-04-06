@@ -9,7 +9,7 @@
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_User_Enhancer.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_User_Enhancer.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
-// @version     1.6
+// @version     1.7
 // @match       http://*.lichess.org/*
 // @grant       none
 // @run-at      document-end
@@ -46,7 +46,7 @@ var colorize = function () {
     if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[Math.floor(Math.random() * colors.length)];
     e.style.color = colorContents[keyContent];
     $('a[href^="/@/"]').each(function (i, e) {
-        if ($(e).attr('href').match(/^\/@\/\w+$/)) {
+        if ($(e).attr('href').match(/^\/@\/[-\w]+$/)) {
             var keyContent = $(e).text().split("\s+", 2)[0];
             if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[i % colors.length];
             $(e).css('color', colorContents[keyContent]);
