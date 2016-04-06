@@ -10,7 +10,7 @@
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_User_Enhancer.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
 // @version     1.6
-// @match       http://*.lichess.org/
+// @match       http://*.lichess.org/*
 // @grant       none
 // @run-at      document-end
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-white.png
@@ -41,22 +41,23 @@ if ($dark.length) {
 
 var colorContents = {};
 var colorize = function () {
-    $('div.messages_container ol.messages.content span a').each(function (i, e) {
+    var e = document.getElementById('user_tag');
+    var keyContent = e.innerHTML;
+    if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[Math.floor(Math.random() * colors.length)];
+    e.style.color = colorContents[keyContent];
+    $('a[href^="/@/"]').each(function (i, e) {
+        if ($(e).attr('href').match(/^\/@\/\w+$/)) {
+            var keyContent = $(e).text().split("\s+", 2)[0];
+            if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[i % colors.length];
+            $(e).css('color', colorContents[keyContent]);
+        }
+    });
+    $('span[data-href^="/@/"]').each(function (i, e) {
         var keyContent = $(e).text().split("\s+", 2)[0];
         if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[i % colors.length];
         $(e).css('color', colorContents[keyContent]);
     });
-    $('a.user_link').each(function (i, e) {
-        var keyContent = $(e).text().split("\s+", 2)[0];
-        if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[i % colors.length];
-        $(e).css('color', colorContents[keyContent]);
-    });
-    $('span.ulink').each(function (i, e) {
-        var keyContent = $(e).text().split("\s+", 2)[0];
-        if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[i % colors.length];
-        $(e).css('color', colorContents[keyContent]);
-    });
-    $('span.user_link').each(function (i, e) {
+    $('#lichess > div.user_show > div.content_box_top > h1').each(function (i, e) {
         var keyContent = $(e).text().split("\s+", 2)[0];
         if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[i % colors.length];
         $(e).css('color', colorContents[keyContent]);
