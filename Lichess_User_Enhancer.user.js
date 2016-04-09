@@ -2,7 +2,7 @@
 // @id          Lichess_User_Enhancer@https://github.com/ddugovic/UserScripts
 // @name        Lichess User Enhancer
 // @namespace   https://github.com/ddugovic/UserScripts
-// @description Enhance user appearance in Lichess.org
+// @description Enhance user and simul appearance in Lichess.org
 // @author      mawekuwe, ddugovic
 // @copyright   2015+, mawekuwe, ddugovic
 // @license     CC0 1.0 Universal
@@ -47,11 +47,14 @@ var colorize = function () {
     if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
     e.style.color = colorContents[keyContent];
     $('a[href^="/@/"]').each(function (i, e) {
-        if ($(e).attr('href').match(/^\/@\/[-\w]+$/)) {
-            var keyContent = $(e).text().split("\s+", 2)[0];
-            if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
-            $(e).css('color', colorContents[keyContent]);
-        }
+        var keyContent = $(e).text().split("\s+", 2)[0];
+        if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
+        $(e).css('color', colorContents[keyContent]);
+    });
+    $('a[href^="/simul/"]').each(function (i, e) {
+        var keyContent = $(e).text().split("\s+", 2)[0];
+        if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
+        $(e).css('color', colorContents[keyContent]);
     });
     $('span[data-href^="/@/"]').each(function (i, e) {
         var keyContent = $(e).text().split("\s+", 2)[0];
