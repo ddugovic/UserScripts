@@ -43,31 +43,31 @@ var n = 0;
 var colorContents = {};
 var colorize = function () {
     var e = document.getElementById('user_tag');
-    var keyContent = e.innerHTML;
+    var keyContent = e.href;
     if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
     e.style.color = colorContents[keyContent];
     $('a[href^="/@/"]').each(function (i, e) {
-        var keyContent = $(e).text().split("\s+", 2)[0];
+        var keyContent = $(e).attr('href');
         if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
         $(e).css('color', colorContents[keyContent]);
     });
     $('a[href^="/simul/"]').each(function (i, e) {
-        var keyContent = $(e).text().split("\s+", 2)[0];
+        var keyContent = $(e).attr('href');
         if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
         $(e).css('color', colorContents[keyContent]);
     });
     $('span[data-href^="/@/"]').each(function (i, e) {
-        var keyContent = $(e).text().split("\s+", 2)[0];
+        var keyContent = $(e).attr('data-href');
         if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
         $(e).css('color', colorContents[keyContent]);
     });
     $('#lichess > div.user_show > div.content_box_top > h1').each(function (i, e) {
-        var keyContent = $(e).text().split("\s+", 2)[0];
+        var keyContent = $(e).attr('href');
         if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
         $(e).css('color', colorContents[keyContent]);
     });
-    $('#tv_channels > a > span').each(function (i, e) {
-        var keyContent = $(e).text().split("\s+", 2)[0];
+    $('#tv_channels > a').each(function (i, e) {
+        var keyContent = $(e).attr('href');
         if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
         $(e).css('color', colorContents[keyContent]);
     });
