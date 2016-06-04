@@ -9,7 +9,7 @@
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Hide_Rating.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Hide_Rating.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
-// @version     0.1
+// @version     0.2
 // @match       http://*.lichess.org/*
 // @grant       none
 // @run-at      document-end
@@ -18,9 +18,12 @@
 
 (function() {
     'use strict';
-    var els = document.getElementsByTagName("a");
+    var els = document.getElementsByTagName("title");
     for(var i = 0, l = els.length; i < l; i++) {
-        var el = els[i];
-        el.innerHTML = el.innerHTML.replace(/\(\d+\??\)/gi, '(?)');
+        els[i].innerHTML = els[i].innerHTML.replace(/\(\d+\??\)/gi, '(?)');
+    }
+    els = document.getElementsByTagName("a");
+    for(i = 0, l = els.length; i < l; i++) {
+        els[i].innerHTML = els[i].innerHTML.replace(/\(\d+\??\)/gi, '(?)');
     }
 })();
