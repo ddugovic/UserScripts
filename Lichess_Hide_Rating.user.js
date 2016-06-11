@@ -10,7 +10,7 @@
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Hide_Rating.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
 // @version     0.2
-// @match       http://*.lichess.org/*
+// @match       https://*.lichess.org/*
 // @grant       none
 // @run-at      document-end
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-black.png
