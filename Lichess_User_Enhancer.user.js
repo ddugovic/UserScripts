@@ -9,8 +9,8 @@
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_User_Enhancer.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_User_Enhancer.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
-// @version     1.7
-// @match       http://*.lichess.org/*
+// @version     1.8
+// @match       https://*.lichess.org/*
 // @grant       none
 // @run-at      document-end
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-white.png
