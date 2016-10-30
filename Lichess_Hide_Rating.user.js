@@ -3,8 +3,8 @@
 // @name        Lichess Hide Rating
 // @namespace   https://github.com/ddugovic/UserScripts
 // @description Hide rating in Lichess.org
-// @author      ddugovic
-// @copyright   2016+ ddugovic
+// @author      ddugovic, ianremsen
+// @copyright   2016+ ddugovic, ianremsen
 // @license     CC0 1.0 Universal
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Hide_Rating.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Hide_Rating.user.js
@@ -12,18 +12,20 @@
 // @version     0.2
 // @match       https://*.lichess.org/*
 // @grant       none
-// @run-at      document-end
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-black.png
 // ==/UserScript==
 
+
 (function() {
     'use strict';
-    var els = document.getElementsByTagName("title");
-    for(var i = 0, l = els.length; i < l; i++) {
-        els[i].innerHTML = els[i].innerHTML.replace(/\(\d+\??\)/gi, '(?)');
+    var els = document.getElementsByClassName("user_link");
+    for(var i = 0; i < els.length; i++) {
+        els[i].innerHTML = els[i].innerHTML.replace(/[\s]*[\x160]*[(]\d*[?]*[)]/g, '');
     }
-    els = document.getElementsByTagName("a");
-    for(i = 0, l = els.length; i < l; i++) {
-        els[i].innerHTML = els[i].innerHTML.replace(/\(\d+\??\)/gi, '(?)');
+    var els1 = document.getElementsByTagName("rating");
+    for (var j = 0; j < els1.length; j++) {
+        console.log(els[j].innerHTML);
+        els1[j].innerHTML = els1[j].innerHTML.replace(/[\s]*[\x160]*\d*[?]*/g, '');
+        console.log(els1[j].innerHTML);
     }
 })();
