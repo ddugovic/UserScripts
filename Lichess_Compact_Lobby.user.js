@@ -9,7 +9,7 @@
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Compact_Lobby.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Compact_Lobby.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
-// @version     0.3
+// @version     0.4
 // @match       https://*.lichess.org/
 // @grant       none
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-white.png
@@ -17,7 +17,7 @@
 
 var container = document.getElementById('hooks_wrap');
 var theOriginal = document.getElementsByClassName('blog')[0];
-theClone = theOriginal.cloneNode(true);
+var theClone = theOriginal.cloneNode(true);
 container.insertBefore(theClone, container.lastChild);
 theClone.style.marginTop = '0px';
 theClone.style.marginBottom = '15px';
@@ -37,19 +37,17 @@ theClone.style.marginTop = '0px';
 theClone.style.marginBottom = '15px';
 theOriginal.parentNode.removeChild(theOriginal);
 
-leaderboards = document.getElementsByClassName('leaderboard');
-var i;
-for (i = leaderboards.length-1; i >= 0; i--) {
-    leaderboards[i].parentNode.removeChild(leaderboards[i]);
-}
+var leaderboard = document.getElementsByClassName('leaderboard')[0];
+leaderboard.parentNode.removeChild(leaderboard);
 
-clearfixes = document.getElementsByClassName('clearfix');
-var i;
-for (i = clearfixes.length-1; i >= 0; i--) {
-    clearfixes[i].parentNode.removeChild(clearfixes[i]);
-}
+container = document.getElementById('site_header');
+theOriginal = document.getElementsByClassName('leaderboard')[0].parentNode;
+theClone = theOriginal.children[0].cloneNode(true);
+theClone.className = 'under_chat';
+container.insertBefore(theClone, container.lastChild);
+theOriginal.parentNode.removeChild(theOriginal);
 
-forumposts = document.getElementsByClassName('new_posts');
+var forumposts = document.getElementsByClassName('new_posts');
 var i;
 for (i = forumposts.length-1; i >= 0; i--) {
     forumposts[i].parentNode.removeChild(forumposts[i]);
