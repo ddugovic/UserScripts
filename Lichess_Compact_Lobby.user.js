@@ -2,7 +2,7 @@
 // @id          Lichess_Compact_Lobby@https://github.com/ddugovic/UserScripts
 // @name        Lichess Compact Lobby
 // @namespace   https://github.com/ddugovic/UserScripts
-// @description Display blog, tournaments and simuls within seek box. Hide leaderboards and forum posts.
+// @description Display blog, tournaments and simuls within seek box. Display tournament winners in margin. Hide leaderboard.
 // @author      ddugovic
 // @copyright   2015+, ddugovic
 // @license     CC0 1.0 Universal
