@@ -11,7 +11,6 @@
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
 // @version     1.10
 // @match       https://lichess.org/*
-// @require     https://code.jquery.com/jquery-1.12.4.min.js
 // @grant       none
 // @run-at      document-end
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-white.png
@@ -30,8 +29,7 @@ function shuffleArray(array) {
     }
     return array;
 }
-var $dark = $("body.dark");
-if ($dark.length) {
+if (document.body.classList.contains('dark')) {
     var colors = shuffleArray([
         "#EF2F41", "#5179FF", "orange", "silver", "cyan", "white", "fuchsia", "gold", "forestgreen", "lightseagreen"]);
 } else {
@@ -88,12 +86,10 @@ var observer = new MutationObserver(function (mutations) {
     });
 });
 
-var chat = $('#chat');
-if (chat.length) {
+if (document.getElementById('chat') !== null) {
     observer.observe(list, {
         attributes: true,
         childList: true,
         characterData: true
     });
 }
-
