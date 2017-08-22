@@ -11,7 +11,7 @@
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
 // @version     1.10
 // @match       https://lichess.org/*
-// @require     https://code.jquery.com/jquery-ui-1.12.4.min.js
+// @require     https://code.jquery.com/jquery-1.12.4.min.js
 // @grant       none
 // @run-at      document-end
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-white.png
