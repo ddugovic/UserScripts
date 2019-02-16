@@ -5,11 +5,11 @@
 // @description Enhance user and simul appearance in Lichess.org
 // @author      mawekuwe, ddugovic
 // @copyright   2015+, mawekuwe, ddugovic
-// @license     CC0 1.0 Universal
+// @license     AGPL-3.0-or-later
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_User_Enhancer.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_User_Enhancer.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
-// @version     1.10
+// @version     1.11
 // @match       https://lichess.org/*
 // @grant       none
 // @run-at      document-end
