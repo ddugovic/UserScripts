@@ -5,11 +5,11 @@
 // @description Display blog, tournaments and simuls within seek box. Display tournament winners in margin. Hide leaderboard.
 // @author      ddugovic
 // @copyright   2015+, ddugovic
-// @license     CC0 1.0 Universal
+// @license     AGPL-3.0-or-later
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Compact_Lobby.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Compact_Lobby.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
-// @version     0.5
+// @version     0.6
 // @match       https://lichess.org/
 // @grant       none
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-white.png
