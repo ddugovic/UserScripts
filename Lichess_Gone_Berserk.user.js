@@ -5,7 +5,7 @@
 // @description Go berserk whenever possible!
 // @author      ddugovic
 // @copyright   2015+, ddugovic
-// @license     GNU Affero General Public License version 3 (AGPL-3.0)
+// @license     AGPL-3.0-only
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Gone_Berserk.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Gone_Berserk.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
