@@ -5,11 +5,11 @@
 // @description Hide rating in Lichess.org
 // @author      ddugovic, ianremsen
 // @copyright   2016+ ddugovic, ianremsen
-// @license     CC0 1.0 Universal
+// @license     AGPL-3.0-or-later
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Hide_Rating.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Hide_Rating.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
-// @version     0.3
+// @version     0.4
 // @match       https://lichess.org/*
 // @grant       none
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-black.png
