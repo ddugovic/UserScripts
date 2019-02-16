@@ -5,11 +5,11 @@
 // @description Go berserk whenever possible!
 // @author      ddugovic
 // @copyright   2015+, ddugovic
-// @license     CC0 1.0 Universal
+// @license     GNU Affero General Public License version 3 (AGPL-3.0)
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Gone_Berserk.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Gone_Berserk.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
-// @version     0.3
+// @version     0.4
 // @match       https://lichess.org/*
 // @grant       none
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-black.png
