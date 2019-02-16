@@ -9,7 +9,7 @@
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Hide_Rating.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_Hide_Rating.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
-// @version     0.4
+// @version     0.5
 // @match       https://lichess.org/*
 // @grant       none
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-black.png
@@ -24,8 +24,6 @@
     }
     var els1 = document.getElementsByTagName("rating");
     for (var j = 0; j < els1.length; j++) {
-        console.log(els[j].innerHTML);
-        els1[j].innerHTML = els1[j].innerHTML.replace(/[\s]*[\x160]*\d*[?]*/g, '');
-        console.log(els1[j].innerHTML);
+        els1[j].style.visibility = "hidden";
     }
 })();
