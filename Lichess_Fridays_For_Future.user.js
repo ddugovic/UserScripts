@@ -12,7 +12,6 @@
 // @version     0.1
 // @match       https://lichess.org/
 // @grant       none
-// @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-white.png
 // ==/UserScript==
 
 /* globals $ */
