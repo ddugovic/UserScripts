@@ -17,5 +17,5 @@
 (function() {
     'use strict';
 
-    options.master_volume = 0.7;
+    options.master_volume = 0.8;
 })();
