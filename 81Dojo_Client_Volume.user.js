@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Reduce 81Dojo client volume
-// @author       Daniel Dugovic
+// @author       ddugovic
 // @copyright    2021+
 // @license      AGPL-3.0-or-later
 // @downloadURL  https://raw.githubusercontent.com/ddugovic/UserScripts/master/81Dojo_Client_Volume.user.js
