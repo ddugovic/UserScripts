@@ -14,7 +14,8 @@
 // @run-at       document-idle
 // ==/UserScript==
 
+/* globals options */
 (function() {
     'use strict';
-    options.master_volume = 0.8; // jshint ignore:line
+    options.master_volume = 0.8;
 })();
