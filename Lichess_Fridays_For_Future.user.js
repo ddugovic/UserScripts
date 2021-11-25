@@ -15,6 +15,7 @@
 // @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-white.png
 // ==/UserScript==
 
+/* globals $ */
 $('body').append(
   '<div id="announce" class="fff">' +
   '<a class="link" href="https://fridaysforfuture.org">' +
