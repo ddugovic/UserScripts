@@ -17,5 +17,5 @@
 /* globals options */
 (function() {
     'use strict';
-    options.master_volume = 0.8;
+    options.master_volume = 0.7;
 })();
