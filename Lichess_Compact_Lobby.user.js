@@ -36,9 +36,10 @@ events.parentNode.removeChild(events);
 var winners = document.getElementsByClassName('lobby__wide-winners')[0];
 winners.parentNode.removeChild(winners);
 
-var lobby = document.getElementsByClassName('lobby__app')[0];
+var app = document.getElementsByClassName('lobby__app')[0];
 var feed = document.getElementsByClassName('lobby__feed')[0];
 
 var feedClone = feed.cloneNode(true);
-lobby.insertBefore(feedClone, lobby.firstChild)
+app.insertBefore(feedClone, app.firstChild)
 feed.parentNode.removeChild(feed);
+app.style.height = 'inherit';
