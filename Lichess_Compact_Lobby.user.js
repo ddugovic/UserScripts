@@ -20,14 +20,10 @@ var table = document.getElementsByClassName('lobby__table')[0];
 while (table.firstChild) {
     table.firstChild.remove();
 }
-var originalCards = document.getElementsByClassName('ublog-post-card');
-for (let i = 0; i < originalCards.length; i++) {
-    var theOriginal = originalCards[i];
-    var theClone = theOriginal.cloneNode(true);
-    table.appendChild(theClone);
-    theClone.style.margin = '0px';
-    theClone.style.padding = '0px';
-    theOriginal.parentNode.removeChild(theOriginal);
+var cards = document.getElementsByClassName('ublog-post-card');
+for (const card of cards) {
+    table.appendChild(card.cloneNode(true));
+    card.parentNode.removeChild(card);
 }
 
 var events = document.getElementsByClassName('lobby__tournaments-simuls')[0];
