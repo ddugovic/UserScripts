@@ -1,5 +1,4 @@
 // ==UserScript==
-// @id          Lichess_User_Enhancer@https://github.com/ddugovic/UserScripts
 // @name        Lichess User Enhancer
 // @namespace   https://github.com/ddugovic/UserScripts
 // @description Enhance user and simul appearance in Lichess.org
@@ -9,7 +8,7 @@
 // @downloadURL https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_User_Enhancer.user.js
 // @updateURL   https://raw.githubusercontent.com/ddugovic/UserScripts/master/Lichess_User_Enhancer.user.js
 // @supportURL  https://github.com/ddugovic/UserScripts/issues
-// @version     1.11
+// @version     1.12
 // @match       https://lichess.org/*
 // @grant       none
 // @run-at      document-end
@@ -29,11 +28,12 @@ function shuffleArray(array) {
     }
     return array;
 }
+var colors;
 if (document.body.classList.contains('dark')) {
-    var colors = shuffleArray([
+    colors = shuffleArray([
         "#EF2F41", "#5179FF", "orange", "silver", "cyan", "white", "fuchsia", "gold", "forestgreen", "lightseagreen"]);
 } else {
-    var colors = shuffleArray([
+    colors = shuffleArray([
         "#EF2F41", "#61BDF2", "#5179D6", "#66CC66", "black", "maroon", "teal", "blue", "navy","fuchsia", "olive", "gray",
         "purple", "green", "red"]);
 }
@@ -45,28 +45,50 @@ var colorize = function () {
     var keyContent = e.href;
     if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
     e.style.color = colorContents[keyContent];
-    $('a[href^="/@/"]').each(function (i, e) {
+    $('a[href^="/@/"]:not([href$="/following"])').each(function (i, e) {
         var keyContent = $(e).attr('href');
         if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
         $(e).css('color', colorContents[keyContent]);
     });
-    $('a[href^="/simul/"]').each(function (i, e) {
+    $('a[data-href^="/@/"]').each(function (i, e) {
+        var keyContent = $(e).attr('data-href');
+        if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
+        $(e).css('color', colorContents[keyContent]);
+    });
+    $('a[href^="/games/"]:not([href="/games/search"])').each(function (i, e) {
         var keyContent = $(e).attr('href');
         if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
         $(e).css('color', colorContents[keyContent]);
+    });
+    $('a[href^="/opening/"]').each(function (i, e) {
+        var keyContent = $(e).attr('href');
+        if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
+        $(e).css('color', colorContents[keyContent]);
+    });
+    $('a[href^="/team/"]').each(function (i, e) {
+        var keyContent = $(e).attr('href');
+        if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
+        $(e).css('color', colorContents[keyContent]);
+    });
+    $('a[href^="/tv/"]').each(function (i, e) {
+        var keyContent = $(e).attr('href');
+        if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
+        $(e).css('color', colorContents[keyContent]);
+    });
+    $('score[data-href^="/@/"]').each(function (i, e) {
+        if ($(e).children().length > 0) {
+            var keyContent = $(e).attr('data-href');
+            if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
+            $(e).css('color', colorContents[keyContent]);
+        }
     });
     $('span[data-href^="/@/"]').each(function (i, e) {
         var keyContent = $(e).attr('data-href');
         if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
         $(e).css('color', colorContents[keyContent]);
     });
-    $('#lichess > div.user_show > div.content_box_top > h1').each(function (i, e) {
-        var keyContent = $(e).attr('href');
-        if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
-        $(e).css('color', colorContents[keyContent]);
-    });
-    $('#tv_channels > a').each(function (i, e) {
-        var keyContent = $(e).attr('href');
+    $('team').each(function (i, e) {
+        var keyContent = e.textContent;
         if (colorContents[keyContent] === undefined) colorContents[keyContent] = colors[n++ % colors.length];
         $(e).css('color', colorContents[keyContent]);
     });
